@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <ru.biovamp.widget.CircleLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:angleOffset="22.5"
+            >
+
+                <ImageView
+                    android:id="@+id/yellow1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/yellow_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/green2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/green_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/red2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/red_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/blue2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/blue_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/yellow2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/yellow_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/green1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/green_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/red1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/red_off"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/blue1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/blue_off"
+                    android:layout_weight="1"/>
+
+        </ru.biovamp.widget.CircleLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/beat_plus"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp" android:text="Beat +"
+                android:onClick="buttonListener"
+            />
+
+            <Button
+                android:id="@+id/beat_minus"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp" android:text="Beat -"
+                android:onClick="buttonListener"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prog_plus"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp" android:text="Prog +"
+                android:onClick="buttonListener"
+            />
+
+            <Button
+                android:id="@+id/prog_minus"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp" android:text="Prog -"
+                android:onClick="buttonListener"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/stop_start"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp" android:text="Stop"
+                android:onClick="buttonListener"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/label_beat"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Beat: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+            <TextView android:id="@+id/label_step"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Step: "
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/label_prog"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Prog: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+            <TextView android:id="@+id/label_mode"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Mode: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
